@@ -8,13 +8,22 @@ export default async function Home() {
 
   return (
     <main className="">
-      Main page
-      <div>
-        <Link href = "/question/1">
-          <button>
-            Start the test!
-          </button>
-        </Link>
+      <div className = "flex flex-col items-center justify-center text-center h-screen gap-10">
+        <div className = "flex flex-col border-2 border-black py-6 gap-2 mx-6 rounded-lg">
+          <div className = "font-bold">
+            What Beverage Are You? Uncover Your Service Personality!
+          </div>
+          <div>
+            A light-hearted quiz to reveal your unique service personality and uncover the ways you make customers smile!
+          </div>
+        </div>
+        <div className = "border-2 border-blue">
+          <Link href = "/introduction">
+            <button className = "bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white">
+              Start the test!
+            </button>
+          </Link>
+        </div>
       </div>
     </main>
   );

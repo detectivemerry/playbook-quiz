@@ -14,6 +14,7 @@ export default function Answer({ question, maxNum }) {
         e.preventDefault();
         if(ans === ans_one)
             context.setAnswers((prevAns) => [...prevAns, ans_one_type])
+
         else 
             context.setAnswers((prevAns) => [...prevAns, ans_two_type])
 
@@ -24,14 +25,14 @@ export default function Answer({ question, maxNum }) {
     } 
     
     return (
-        <div>
+        <div className = "mx-3 flex flex-col gap-6 ">
             <div>
-                <button className = "border-2 border-teal-500" onClick = {handleSubmit(ans_one)}>
+                <button className = "bg-gray-700 text-white p-2 rounded-3xl border-2 border-gray-700 hover:text-gray-700 hover:bg-white text-left px-5" onClick = {handleSubmit(ans_one)}>
                    {ans_one} 
                 </button>
             </div>
             <div>
-                <button className = "border-2 border-teal-500" onClick = {handleSubmit(ans_two)}>
+                <button className = "bg-gray-700 text-white p-2 rounded-3xl border-2 border-gray-700 hover:text-gray-700 hover:bg-white text-left px-5" onClick = {handleSubmit(ans_two)}>
                    {ans_two} 
                 </button>
             </div>

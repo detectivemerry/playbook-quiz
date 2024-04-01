@@ -4,6 +4,7 @@ import { NextResponse } from "next/server";
 export async function GET(req, res){
     try {
         const questions = await getDataFromXlsx();
+
         if(questions.length > 0)
             return NextResponse.json({questions : questions}, {status : 200})
         else

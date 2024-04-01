@@ -1,4 +1,5 @@
 import Answer from "./Answer";
+import ProgressBar from "./ProgressBar";
 
 async function getQuestions(){
   const questions = await fetch("http://localhost:3000/api/questions", {
@@ -39,11 +40,17 @@ export default async function page({params}) {
 
   return (
 
-    <main>
-      <div>
-        Prompt : {question.prompt}
+    <main className = "flex flex-col text-center h-screen">
+      <div className = "flex justify-center m-3 my-12">
+        {params.id} / {maxNum}
       </div>
-      <div>
+      <div className = "border-2 border-black h-2/5">
+        Picture
+      </div>
+      <div className = "p-3 py-12">
+        {question.prompt}
+      </div>
+      <div classname = "">
         <Answer key = {params.id} question = {question} maxNum = {maxNum}/>
       </div>
     </main>
