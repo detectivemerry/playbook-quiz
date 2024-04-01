@@ -1,5 +1,4 @@
 import Answer from "./Answer";
-import ProgressBar from "./ProgressBar";
 
 async function getQuestions(){
   const questions = await fetch("http://localhost:3000/api/questions", {
@@ -33,18 +32,17 @@ export async function generateStaticParams(){
 export const dynamicParams = true;
 
 export default async function page({params}) {
-
-  const questions = await getQuestions();
-  const maxNum = questions.length;
-  const question = questions.find((q) => q.question_id == params.id) 
+  try {
+    const questions = await getQuestions();
+    const maxNum = questions.length;
+    const question = questions.find((q) => q.question_id == params.id) 
 
   return (
-
-    <main className = "flex flex-col text-center h-screen">
+    <main className = "flex flex-col text-center items-center h-screen">
       <div className = "flex justify-center m-3 my-12">
         {params.id} / {maxNum}
       </div>
-      <div className = "border-2 border-black h-2/5">
+      <div className = "border-2 border-black h-2/5 w-full lg:w-2/5">
         Picture
       </div>
       <div className = "p-3 py-12">
@@ -54,5 +52,9 @@ export default async function page({params}) {
         <Answer key = {params.id} question = {question} maxNum = {maxNum}/>
       </div>
     </main>
+
   )
+  } catch(error){
+    throw new Error("Internal Server Error")
+  }
 }
