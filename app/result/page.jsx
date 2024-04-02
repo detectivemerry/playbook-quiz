@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { useContext } from 'react'
 import { AppContext } from '@/app/context/App.context';
 
-export default function page() {
+export default function Result() {
   try {
 
   const context = useContext(AppContext)
