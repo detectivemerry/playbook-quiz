@@ -1,8 +1,14 @@
 import { Inter } from "next/font/google";
 import { Providers } from "./providers";
+import { Cherry_Bomb_One, Quicksand } from "next/font/google";
 
 import "./globals.css";
-const inter = Inter({ subsets: ["latin"] });
+//const inter = Inter({ subsets: ["latin"] });
+
+const inter = Quicksand({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata = {
   title: "Playbook quiz",
@@ -13,7 +19,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Providers>
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          <div className = "bg-amber-50">
+          {children}
+          </div></body>
       </Providers>
     </html>
   );

@@ -34,6 +34,11 @@ const schema = {
         type : String,
         prop : 'ans_two_type',
         required : true
+    },
+    'question_img_name' : {
+        type : String,
+        prop : 'question_img_name',
+        required : true
     }
 }
 

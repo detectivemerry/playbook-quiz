@@ -1,6 +1,6 @@
 "use client"
 
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { AppContext } from '@/app/context/App.context';
 import { useRouter } from 'next/navigation';
 
@@ -23,16 +23,21 @@ export default function Answer({ question, maxNum }) {
         else
             router.push(`/question/${question.question_id + 1}`)
     } 
+    // reset answers if at question 1
+    useEffect(() => {
+        if(question.question_id === 1)
+            context.setAnswers([]);
+    }, [])
     
     return (
-        <div className = "mx-3 flex flex-col gap-6 ">
+        <div className = "mx-3 flex flex-col gap-6 font-bold">
             <div>
-                <button className = "bg-gray-700 text-white p-2 rounded-3xl border-2 border-gray-700 hover:text-gray-700 hover:bg-white text-left px-5" onClick = {handleSubmit(ans_one)}>
+                <button className = "bg-emerald-700 text-white p-2 rounded-3xl hover:text-gray-700 hover:bg-white text-left px-5" onClick = {handleSubmit(ans_one)}>
                    {ans_one} 
                 </button>
             </div>
             <div>
-                <button className = "bg-gray-700 text-white p-2 rounded-3xl border-2 border-gray-700 hover:text-gray-700 hover:bg-white text-left px-5" onClick = {handleSubmit(ans_two)}>
+                <button className = "bg-emerald-700 text-white p-2 rounded-3xl hover:text-gray-700 hover:bg-white text-left px-5" onClick = {handleSubmit(ans_two)}>
                    {ans_two} 
                 </button>
             </div>
