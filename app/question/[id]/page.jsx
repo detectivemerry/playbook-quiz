@@ -1,12 +1,10 @@
 import { getDataFromXlsx } from "@/app/lib/data";
+import { getDataFromXlsx } from "@/app/lib/data";
 import Answer from "./Answer";
 
 export default async function page({params}) {
 
     const questions = await getDataFromXlsx();
-export default async function page({ params }) {
-  try {
-    const questions = await getQuestions();
     const maxNum = questions.length;
     const question = questions.find((q) => q.question_id == params.id);
 
