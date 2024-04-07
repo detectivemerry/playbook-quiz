@@ -1,5 +1,5 @@
 import { getDataFromXlsx } from "@/app/lib/data";
-import { getDataFromXlsx } from "@/app/lib/data";
+import Picture from "./Picture";
 import Answer from "./Answer";
 
 export default async function page({params}) {
@@ -22,7 +22,5 @@ export default async function page({params}) {
         </div>
       </main>
     );
-  } catch (error) {
-    throw new Error(error);
-  }
+}
 

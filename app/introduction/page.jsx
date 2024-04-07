@@ -2,27 +2,10 @@ import Link from "next/link"
 import Image from "next/image"
 import gif from "@/input/images/GIF2_Q1_BaristaServer.gif"
 import Picture from "../question/[id]/Picture";
+import { getDataFromXlsx } from "../lib/data";
 
 export default async function page() {
 
-  async function getQuestions() {
-    const questions = await fetch("http://localhost:3000/api/questions", {
-      method: "GET",
-      next: { revalidate: 0 },
-    })
-      .then((res) => {
-        if (!res.ok) throw Error("Error connecting to server.");
-        return res.json();
-      })
-      .then((data) => {
-        return data;
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-
-    return questions.questions;
-  }
     //<main className="">
     //  <div className = "flex flex-col items-center justify-center text-center h-screen gap-10">
     //    <div className = "flex flex-col border-2 border-black py-6 gap-2 mx-6 rounded-lg px-2 lg:px-12">
@@ -50,7 +33,7 @@ export default async function page() {
     //  </div>
     //</main>
 
-    const questions = await getQuestions();
+    const questions = await getDataFromXlsx();
     const maxNum = questions.length;
     const prompt = "Step into the shoes of a cafe barista-server at Beanstalk Cafe! You are the face of the cafe, dedicated to providing a delightful service experience to every customer.";
   return (

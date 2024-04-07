@@ -8,7 +8,6 @@ export default function Picture({ question_img_name }) {
 
   useEffect(() => {
     setImage(question_img_name);
-    console.log(question_img_name)
   }, []);
 
   return (
