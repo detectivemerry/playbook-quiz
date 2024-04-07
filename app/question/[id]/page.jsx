@@ -1,37 +1,9 @@
+import { getDataFromXlsx } from "@/app/lib/data";
 import Answer from "./Answer";
-import Image from "next/image"
-import Picture from "./Picture";
 
-async function getQuestions() {
-  const questions = await fetch("http://localhost:3000/api/questions", {
-    method: "GET",
-    next: { revalidate: 0 },
-  })
-    .then((res) => {
-      if (!res.ok) throw Error("Error connecting to server.");
-      return res.json();
-    })
-    .then((data) => {
-      return data;
-    })
-    .catch((error) => {
-      console.error(error);
-    });
+export default async function page({params}) {
 
-  return questions.questions;
-}
-
-export async function generateStaticParams() {
-  const questions = await getQuestions();
-  const params = questions.map((q) => ({
-    id: String(q.question_id),
-  }));
-
-  return params;
-}
-
-export const dynamicParams = true;
-
+    const questions = await getDataFromXlsx();
 export default async function page({ params }) {
   try {
     const questions = await getQuestions();
@@ -55,4 +27,4 @@ export default async function page({ params }) {
   } catch (error) {
     throw new Error(error);
   }
-}
+

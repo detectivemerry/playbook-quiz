@@ -9,31 +9,34 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <div className="flex flex-col items-center justify-center m-32 gap-12">
-      <div>
-        <h2>Something went wrong!</h2>
+    <main className="">
+      <div className = "flex flex-col items-center justify-center text-center h-screen gap-10">
+        <div className = "flex flex-col  py-6 gap-2 mx-6 rounded-lg lg:px-12">
+          <div className = "font-bold">
+            <h2>Something went wrong!</h2>
+          </div>
+        </div>
+        <div className = "flex flex-col gap-2">
+          <div>
+            <button
+              className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white"
+              onClick={
+                // Attempt to recover by trying to re-render the segment
+                () => reset()
+              }
+            >
+              Try again
+            </button>
+          </div>
+          <div>
+            <Link href="/">
+              <button className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white">
+                Back to Home
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
-      <div>
-        <button
-          className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white"
-          onClick={
-            // Attempt to recover by trying to re-render the segment
-            () => reset()
-          }
-        >
-          Try again
-        </button>
-      </div>
-      <div>
-        or
-      </div>
-      <div>
-        <Link href="/">
-          <button className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white">
-            Back to Home
-          </button>
-        </Link>
-      </div>
-    </div>
+    </main>
   );
 }
