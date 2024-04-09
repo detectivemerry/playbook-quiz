@@ -49,7 +49,7 @@ export default function Result() {
           <div className="flex justify-center">
             <Link href="/">
               <button className="bg-white text-black border-2 border-sky-950 p-2 rounded-lg shadow-2xl">
-                Try the quiz again!
+                <b>Try the quiz again!</b>
               </button>
             </Link>
           </div>
@@ -59,9 +59,9 @@ export default function Result() {
               onClick={toggleShowPDF}
             >
               {showPDF ? (
-                <>Hide ECDA Service Playbook</>
+                <><b>Hide ECDA Service Playbook</b></>
               ) : (
-                <>Show ECDA Service Playbook</>
+                <><b>Show ECDA Service Playbook</b></>
               )}
             </button>
           </div>

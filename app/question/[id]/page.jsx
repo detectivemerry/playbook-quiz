@@ -11,7 +11,7 @@ export default async function page({params}) {
     return (
       <main className="flex flex-col text-center items-center h-screen">
         <div className="flex justify-center m-3 my-8">
-          {params.id} / {maxNum + 1}
+          <b>{params.id} / {maxNum + 1}</b>
         </div>
           <div className="flex justify-center h-2/5 w-full lg:w-2/5 border-2 border-sky-950 rounded-lg bg-white p-2 ">
             <Picture question_img_name = {question.question_img_name} />
