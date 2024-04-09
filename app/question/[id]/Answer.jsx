@@ -18,7 +18,7 @@ export default function Answer({ question, maxNum }) {
         else 
             context.setAnswers((prevAns) => [...prevAns, ans_two_type])
 
-        if(question.question_id === maxNum) // last question
+        if(question.question_id === maxNum + 1) // last question
             router.push('/result')
         else
             router.push(`/question/${question.question_id + 1}`)
@@ -32,12 +32,12 @@ export default function Answer({ question, maxNum }) {
     return (
         <div className = "mx-3 flex flex-col gap-6 font-bold">
             <div>
-                <button className = "bg-emerald-700 text-white p-2 rounded-3xl hover:text-gray-700 hover:bg-white text-left px-5" onClick = {handleSubmit(ans_one)}>
+                <button className = "bg-white text-black p-2 border-2 border-sky-950 rounded-3xl text-left px-5 shadow-2xl" onClick = {handleSubmit(ans_one)}>
                    {ans_one} 
                 </button>
             </div>
             <div>
-                <button className = "bg-emerald-700 text-white p-2 rounded-3xl hover:text-gray-700 hover:bg-white text-left px-5" onClick = {handleSubmit(ans_two)}>
+                <button className = "bg-white text-black p-2 border-2 border-sky-950 p-2 rounded-3xl text-left px-5 shadow-2xl" onClick = {handleSubmit(ans_two)}>
                    {ans_two} 
                 </button>
             </div>

@@ -33,7 +33,7 @@ export default function Result() {
 
     return (
       <div>
-        <div className="bg-gray-700 lg:flex lg:flex-col lg:items-center">
+        <div className="flex flex-col items-center h-[85vh]">
           {image && (
             <Image
               src={require(`@/input/images/${image}`)}
@@ -41,21 +41,21 @@ export default function Result() {
               width={0}
               height={0}
               sizes="100vw"
-              style={{ width: "auto", height: "80%" }}
+              style={{ width: "auto", height: "100%" }}
             />
           )}
         </div>
         <div className="flex-col items-center my-6">
           <div className="flex justify-center">
             <Link href="/">
-              <button className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white">
+              <button className="bg-white text-black border-2 border-sky-950 p-2 rounded-lg shadow-2xl">
                 Try the quiz again!
               </button>
             </Link>
           </div>
-          <div className="flex justify-center py-6">
+          <div className="flex justify-center py-3">
             <button
-              className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white"
+              className="bg-white text-black p-2 border-2 border-sky-950 rounded-lg shadow-2xl"
               onClick={toggleShowPDF}
             >
               {showPDF ? (
@@ -69,7 +69,7 @@ export default function Result() {
         <div className="flex justify-center">
           {showPDF && (
             <embed
-              src="https://drive.google.com/file/d/1VCbA7vmqg5iyF6flmk0Rdllx-Tj6jjzT/preview?usp=sharing"
+              src="https://drive.google.com/file/d/1_5oWdt1KPAQczsrOni7A3tyvENmEyYkx/preview?usp=sharing"
               frameborder="0"
               width="100%"
               height="1000px"

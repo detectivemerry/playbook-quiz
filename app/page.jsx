@@ -33,8 +33,8 @@ export default async function Home() {
         </div>
         <div className="">
           <Link href="/introduction">
-            <button className="bg-emerald-700 text-white p-2 rounded-lg hover:text-gray-700 hover:bg-emerald-50">
-              <b> Start the test!</b>
+            <button className="bg-white text-black p-2 border-2 border-sky-950 p-2 rounded-lg shadow-2xl">
+              <b> Start The Test!</b>
             </button>
           </Link>
         </div>

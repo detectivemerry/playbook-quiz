@@ -19,7 +19,7 @@ export default function Error({ error, reset }) {
         <div className = "flex flex-col gap-2">
           <div>
             <button
-              className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white"
+              className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700"
               onClick={
                 // Attempt to recover by trying to re-render the segment
                 () => reset()
@@ -30,7 +30,7 @@ export default function Error({ error, reset }) {
           </div>
           <div>
             <Link href="/">
-              <button className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white">
+              <button className="bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700">
                 Back to Home
               </button>
             </Link>
