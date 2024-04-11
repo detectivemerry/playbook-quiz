@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import gif from "@/input/images/GIF1_IntroPage.gif";
 import { inter, quicksand } from "@/app/fonts";
 
 export default async function Home() {
@@ -17,7 +16,7 @@ export default async function Home() {
 
           <div className="flex justify-center items-center -mb-8 -mt-2 h-64">
             <Image
-              src={gif}
+              src={`/images/GIF1_IntroPage.gif`}
               alt={`Intro page`}
               width={0}
               height={0}

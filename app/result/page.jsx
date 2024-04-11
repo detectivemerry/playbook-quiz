@@ -36,7 +36,7 @@ export default function Result() {
         <div className="flex flex-col items-center h-[85vh]">
           {image && (
             <Image
-              src={require(`@/input/images/${image}`)}
+              src={`/images/${image}`}
               alt={`Image of result`}
               width={0}
               height={0}

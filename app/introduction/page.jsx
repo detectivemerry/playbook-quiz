@@ -1,37 +1,8 @@
 import Link from "next/link"
-import Image from "next/image"
-import gif from "@/input/images/GIF2_Q1_BaristaServer.gif"
 import Picture from "../question/[id]/Picture";
 import { getDataFromXlsx } from "../lib/data";
 
 export default async function page() {
-
-    //<main className="">
-    //  <div className = "flex flex-col items-center justify-center text-center h-screen gap-10">
-    //    <div className = "flex flex-col border-2 border-black py-6 gap-2 mx-6 rounded-lg px-2 lg:px-12">
-    //      <div className = "flex justify-center items-center mb-4 h-64">
-    //        <Image
-    //          src={gif}
-    //          alt={`Intro page`}
-    //          width={0}
-    //          height={0}
-    //          sizes="100vw"
-    //          style={{ width: "auto", height: "100%" }}
-    //          unoptimized
-    //        />
-    //      </div>
-    //        <p>Step into the shoes of a cafe barista-server at Beanstalk Cafe!</p>
-    //        <p>You are the face of the cafe, dedicated to providing a delightful service experience to every customer.</p>
-    //    </div>
-    //    <div className = "">
-    //      <Link href = "/question/1">
-    //        <button className = "bg-gray-700 text-white p-2 rounded-lg border-2 border-gray-700 hover:text-gray-700 hover:bg-white">
-    //          Enter the cafe!
-    //        </button>
-    //      </Link>
-    //    </div>
-    //  </div>
-    //</main>
 
     const questions = await getDataFromXlsx();
     const maxNum = questions.length;
