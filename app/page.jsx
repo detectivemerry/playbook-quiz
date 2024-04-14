@@ -7,16 +7,16 @@ export default async function Home() {
   //const [questions, setQuestions] = useState([]);
 
   return (
-    <main className="bg-amber-50">
+    <main className="">
       <div className="flex flex-col items-center justify-center text-center h-screen gap-10 ">
         <div className="flex flex-col border-2 border-black py-6 gap-2 mx-6 rounded-lg lg:px-12 bg-white">
           <div className={`font-bold text-2xl ${quicksand.className}`}>
             What Beverage Are You?
           </div>
 
-          <div className="flex justify-center items-center -mb-8 -mt-2 h-64">
+          <div className="flex justify-center items-center -mt-2 h-64">
             <Image
-              src={`/images/GIF1_IntroPage.gif`}
+              src={`/images/1.gif`}
               alt={`Intro page`}
               width={0}
               height={0}

@@ -5,7 +5,7 @@ export default function Loading() {
     <main className="">
       <div className = "flex flex-col items-center justify-center text-center h-screen gap-10">
         <div className = "flex flex-col py-6 gap-2 mx-6 rounded-lg p-12 lg:px-12">
-          <div className = "font-bold text-xl">
+          <div className = "font-bold text-xl text-white">
             Loading next question... 
           </div>
         </div>

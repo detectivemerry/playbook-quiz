@@ -9,7 +9,7 @@ export default function Error({ error, reset }) {
   }, [error]);
 
   return (
-    <main className="">
+    <main className="text-white">
       <div className = "flex flex-col items-center justify-center text-center h-screen gap-10">
         <div className = "flex flex-col border-2 border-black py-6 gap-2 mx-6 rounded-lg lg:px-12">
           <div className = "font-bold">

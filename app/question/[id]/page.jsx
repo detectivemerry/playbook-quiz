@@ -10,13 +10,13 @@ export default async function page({params}) {
 
     return (
       <main className="flex flex-col text-center items-center h-screen">
-        <div className="flex justify-center m-3 my-8">
+        <div className="flex justify-center text-white m-3 my-5">
           <b>{params.id} / {maxNum + 1}</b>
         </div>
           <div className="flex justify-center h-2/5 w-full lg:w-2/5 border-2 border-sky-950 rounded-lg bg-white p-2 ">
             <Picture question_img_name = {question.question_img_name} />
           </div>
-        <div className="p-6 py-6 font-bold text-left text-xl">{question.prompt}</div>
+        <div className="p-6 py-6 font-bold text-left text-xl text-white">{question.prompt}</div>
         <div className="">
           <Answer key={params.id} question={question} maxNum={maxNum} />
         </div>

@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Providers>
         <body className={inter.className}>
-          <div className = "bg-amber-50">
+          <div className = "bg-slate-800">
           {children}
           </div></body>
       </Providers>
