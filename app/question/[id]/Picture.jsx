@@ -10,7 +10,6 @@ export default async function Picture({ question_img_name }) {
 
   return (
     <>
-
       <Image
         src = {`/images/${question_img_name}`}
         alt={`question image`}

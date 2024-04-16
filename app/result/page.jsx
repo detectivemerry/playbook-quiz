@@ -70,7 +70,7 @@ export default function Result() {
           <div className="flex justify-center mb-3">
             {showPDF && (
               <embed
-                src="https://drive.google.com/file/d/1_5oWdt1KPAQczsrOni7A3tyvENmEyYkx/preview?usp=sharing"
+                src="https://drive.google.com/file/d/1BafaZKsEGQ2O6dDbkpvgC7tYxaTH4pE5/preview?usp=sharing"
                 frameborder="0"
                 width="100%"
                 height="1000px"
